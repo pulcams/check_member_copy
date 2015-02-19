@@ -30,7 +30,7 @@ A simple [AutoIT](https://www.autoitscript.com/site/) macro to help student work
 2. Encoding level (ELvL) is full
 	 - LDR/17 is not 3,5,8 or M
 3. Relationship designators are present
-	- 1xx if present has $e
-	- 7xx if present has $e
+	- 1xx if present has `$e`
+	- 7xx if present has `$e`
 
 Also, if `300` contains "online" the record has been mistakenly overlain; alert the human. 

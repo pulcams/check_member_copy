@@ -10,20 +10,6 @@
 ; From 20150106
 ; pmg
 ;=================================================================
-; Decision tree:
-;			    complete
-;				/     \
-;			  yes	  no - 'to the hold'
-;			   |
-;		  full ELvL
-;	    	/    \
-;		  yes     no - 'ENCODING LEVEL'
-;           |
-;       rel des.
-;         /  \
-;        yes  no - 'Relationship designators'
-;        |
-;     'OK to process'
 
 Local $action = "" ; action for MsgBox
 Local $bib = "none" ; bib id
