@@ -12,7 +12,8 @@
 ;=================================================================
 
 Local $action = "" ; action for MsgBox
-Local $bib = "none" ; bib id
+Local $bib = "none" ; bib id default
+Local $bibid = "" ; bib id from $bib (split window title)
 Local $elvl = "" ; encoding level
 Local $f050a_count = 0
 Local $flag = 0 ; for MsgBox
@@ -189,7 +190,8 @@ WEnd
 ; get bib id
 ;====================================
 $bib = StringSplit(WinGetTitle("Voyager Cataloging"), " ")
-$bib = $bib[5]
+Sleep(100)
+$bibid = $bib[5]
 
 ;====================================
 ; report
@@ -245,7 +247,7 @@ Else ; record is not 'complete'
 EndIf
 
 ; write to log
-$msg = _Now() & "," & $bib & "," & $track & "," & $fullcallno & "," & $multcallno & "," & $sublit & "," & $elvl
+$msg = _Now() & "," & $bibid & "," & $track & "," & $fullcallno & "," & $multcallno & "," & $sublit & "," & $elvl
 Local $hFile = FileOpen($log, 1)
 FileWriteLine($hFile, $msg)
 FileClose($hFile)
