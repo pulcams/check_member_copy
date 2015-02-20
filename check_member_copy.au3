@@ -189,9 +189,12 @@ WEnd
 ;====================================
 ; get bib id
 ;====================================
-$bib = StringSplit(WinGetTitle("Voyager Cataloging"), " ")
+$bib = StringSplit(WinGetTitle("Voyager Cataloging -"), " ")
 Sleep(100)
 $bibid = $bib[5]
+If @error Then ; if $bib[5] doesn't exist because record not maximized, etc.
+	$bibid = $bib
+EndIf
 
 ;====================================
 ; report
