@@ -1,6 +1,5 @@
 check-member-copy
 ==============
-###Under active development
 
 A simple [AutoIT](https://www.autoitscript.com/site/) macro to help student workers quickly sort member copy to expedite processing. It does this by running cursory checks on bib records in the Voyager Cataloging module. Outputs MsgBox prompts and a csv log file (in the same directory as the script by default). The logic is as follows:
 ```
